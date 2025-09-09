@@ -1,0 +1,105 @@
+{{ if .Site.Params.contact.enable }}
+{{ "<!-- Start Contact Us -->" | safeHTML }}
+<section class="contact-us section bg-gray" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="title text-center">
+                    {{ with .Site.Params.contact.topTitle }}<h4>{{.}}</h4>{{ end }}
+                    {{ with .Site.Params.contact.title }}
+                    <h2>{{.}}</h2>
+                    <span class="border"></span>
+                    {{ end }}
+                    {{ with .Site.Params.contact.subtitle }}<p>{{.}}</p>{{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{ "<!-- Contact Details -->" | safeHTML }}
+            <div class="col-12 col-md-12">
+                    <div class="col-12 col-md-12">
+
+                           <iframe      style="width: 100%; height: 100%; border: 0;"
+                                        src= "{{ .Site.Params.contact.map_url }}"
+                                        title="{{ .Site.Params.contact.address }}"
+                                        aria-label="{{ .Site.Params.contact.address }}"
+                                        loading="lazy"
+                                ></iframe>
+                    </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 d-flex align-items-stretch" >
+                <div class="address-block contact-meta-block w-100">
+                    <a href="{{ .Site.Params.contact.map_pin_url }}" target="_blank" style="font-size: 50px; color: black;">
+                        <i class="tf-ion-android-pin"></i>
+                    </a>
+
+                    <h4>Miejsce</h4>
+                    <p>  </p>
+                    {{ with .Site.Params.contact.address }}<p>{{ . | safeHTML }}</p>{{ end }}
+                    {{ with .Site.Params.contact.address_line2 }}<p>{{ . | safeHTML }}</p>{{ end }}
+                    {{ with .Site.Params.contact.address_line3 }}<p>{{ . | safeHTML }}</p>{{ end }}
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-stretch">
+                <div class="phone-block contact-meta-block w-100">
+                    <a href="tel: {{ .Site.Params.contact.phone }}" target="_blank" style="font-size: 50px; color: black;">
+                        <i class="tf-ion-ios-telephone"></i>
+                    </a>
+                    <h4>Telefon w razie potrzeby</h4>
+                    <p>  </p>
+                    <p>
+                         {{ with .Site.Params.contact.phone }}  {{.}} {{ end }} 
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-stretch" >
+                <div class="social-icons-block contact-meta-block w-100">
+                    <a href="{{.Site.Params.contact.linkedin }}" target="_blank" style="font-size: 50px; color: black;">
+                       <i class="tf-ion-ios-contact"></i>
+                    </a>
+                    <h4>Nasze social media</h4>
+                    <ul class="list-inline social-icon">
+                        {{ with .Site.Params.contact.facebook }}
+                        <li class="list-inline-item">
+                            <a href="{{.}}">
+                                <i class="tf-ion-social-facebook"></i>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ with .Site.Params.contact.twitter }}
+                        <li class="list-inline-item">
+                            <a href="{{.}}">
+                                <i class="tf-ion-social-twitter"></i>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ with .Site.Params.contact.linkedin }}
+                        <li class="list-inline-item">
+                            <a href="{{.}}">
+                                <i class="tf-ion-social-linkedin"></i>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ with .Site.Params.contact.dribbble }}
+                        <li class="list-inline-item">
+                            <a href="{{.}}">
+                                <i class="tf-ion-social-dribbble"></i>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ with .Site.Params.contact.instagram }}
+                        <li class="list-inline-item">
+                            <a href="{{.}}">
+                                <i class="tf-ion-social-instagram"></i>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

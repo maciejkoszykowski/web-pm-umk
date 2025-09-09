@@ -1,0 +1,189 @@
+enable  : true
+topTitle: PM Connect Conf
+title   : Zespół konferencji 
+# subtitle może być użyty w przyszłości jeśli do konferencji będzie rekrutacja 
+subtitle: "    "
+
+# opcje linków
+# linkedInURL   : https://www.linkedin.com/
+# facebookURL   : https://www.facebook.com/
+# instagramURL  : https://www.instagram.com/
+# twitterURL    : https://twitter.com/
+# gplusURL      : https://plus.google.com/
+# dribbbleURL   : https://dribbble.com/
+
+
+titleOrg: Organizacja wydarzenia
+
+pm:
+  - image         : images/team/wiola.png
+    name          : Wioleta Borczyńska
+    designation   : Kierownik Projektu
+    description   : >
+        Wolontariuszka PMI PC Kujawsko - Pomorskie Branch od 2015 roku. 
+        Doświadczony Team Manager z 11 letnim doświadczeniem w branży IT. 
+        Obecnie pracuje na stanowisku Demand Manager w firmie Atos, zarzadzając grupą specjalistów. 
+        Obecnie rozwija swoje kompetencje i doświadczenie w Zarządzaniu Projektami, z czym wiąże swoją przyszłą ścieżkę zawodową. 
+        Absolwentka studiów podyplomowych na kierunku Zarządzania Projektami, posiadaczka certyfikatów PRINCE2®, AgilePM®, ITIL4®.
+    linkedInURL   : https://www.linkedin.com/in/wiola-borczynska-41b781a1/
+
+
+
+titleRada: Rada Programowa
+rada:
+  - image         : images/team/rada/marlena.png
+    name          : Marlena Ciechan-Kujawa
+    designation   : prof. UMK, Dziekan WNEiZ
+    description   : >
+      Profesor w Uniwersytecie Mikołaja Kopernika w Toruniu, Dziekan Wydziału Nauk Ekonomicznych i Zarządzania UMK. 
+      Od wielu lat kieruje realizowanymi z partnerami biznesowymi studiami podyplomowymi Business Controlling i Project Management. W swoich badaniach koncentruje się na analizie uwarunkowań i mechanizmów wdrażania strategii cyfrowych i zrównoważonych oraz ich wpływu na wyniki organizacji. Ekspertka w zakresie zintegrowanych systemów zarządzania, a także projektowania modeli pomiaru oraz raportowania finansowych  i niefinansowych generatorów efektywności biznesowej.
+    linkedInURL   : https://www.linkedin.com/in/marlena-ciechan-kujawa/
+  
+  - image         : images/team/rada/piotr.png
+    name          : Piotr Sobolewski
+    designation   : Wykładowca UMK
+    description   : >
+      Z zarządzaniem projektami jest związany od ponad 20 lat. Prowadził projekty w sektorze elektrotechnicznym, automotive oraz IT. Od 2013 roku pracuje w firmie Atos, gdzie obecnie zarządza działem Program and Project Management. Wieloletnie doświadczenie z różnych branż łączy z przygotowaniem teoretycznym. Jest absolwentem studiów MBA oraz posiadaczem wielu certyfikatów m.in.: PMP®, Prince2, Prince2 Agile, Agile PM, MSP, ITIL. Od kilku lat swoją wiedzą i doświadczeniem dzieli się prowadząc szkolenia i wykłady z Zarządzania Projektami na UMK oraz WSB Merito.
+    linkedInURL   : https://www.linkedin.com/in/piotrsobolewski/
+
+  - image         : images/team/rada/jakub.png
+    name          : Jakub Polaszek
+    designation   : Lider Społeczności PMI
+    description   : >
+      Menadżer z ponad 24-letnim doświadczeniem w zarządzaniu projektami, programami oraz portfelami projektów. Posiada certyfikaty PMP®, PRINCE2®, MSP®, AgilePM®, Lean Six Sigma Yellow Belt, ITIL® oraz P3O®. Specjalizuje się w sektorach IT, ICT, bezpieczeństwa IT oraz rozwoju oprogramowania. Pełnił funkcje Wiceprezesa ds. Finansów oraz Członka Komisji Rewizyjnej w PMI Poland Chapter. Wykładał na podyplomowych studiach z Zaawansowanego Zarządzania Programami i Projektami na Wyższej Szkole Bankowej w Toruniu. Prowadził także warsztaty w ramach PMO Academy w Atos PGS. Jest recenzentem międzynarodowych standardów PMI oraz korektorem polskiego tłumaczenia Przewodnika PMBOK®. Obecnie prowadzi badania w ramach doktoratu wdrożeniowego na Uniwersytecie Mikołaja Kopernika w Toruniu, koncentrując się na zastosowaniu sztucznej inteligencji w prognozowaniu kluczowych wskaźników wydajności (KPI) projektów. Mentor i trener, pomagający kształtować przyszłych liderów zarządzania projektami.
+    linkedInURL  : https://www.linkedin.com/in/polaszek/
+
+  - image         : images/team/rada/jerzy.png
+    name          : Jerzy Stawicki
+    designation   : Ekspert ZP i AI
+    description   : >
+              Konsultant i trener zarządzania projektami i portfelem projektów oraz metod zwinnych z 30-letnim
+              doświadczeniem. Ekspert podejścia Kanban oraz Flow Management, specjalista budowania
+              efektywnych i zwinnych organizacji projektowych. Pasjonat zastosowania Agentów AI w różnych
+              obszarach zarządzania.
+              Mówi o sobie: „pomagam menedżerom, project managerom, zespołom i firmom pracować i
+              zarządzać efektywniej, mądrzej oraz mieć z pracy więcej satysfakcji”.
+              Wykładowca podyplomowych studiów „Zarządzanie Projektami” na Politechnice Warszawskiej (od
+              2010 r.) i Uniwersytecie Mikołaja Kopernika (od 2018 r.).
+              Prelegent na międzynarodowych i krajowych konferencjach dotyczących metod zwinnych (Agile) oraz
+              zarządzania projektami. Felietonista kwartalnika „Strefa PMI”.
+    linkedInURL  : https://www.linkedin.com/in/jerzystawicki/
+
+member  : 
+  - image         : images/team/kamila.png
+    name          : Kamila Kłosowska
+    designation   : Zespół ds. Marketingu
+    description   : >
+      Z światem zarządzania projektami zawodowo związana od 6 lat. Swoje doświadczenie buduje w Project Management Office, które zostało wyróżnione The most mature PMO 2018 Portfolio Experience, PMO Award. 
+      Od roku rozwija się jako Project Managerka. Świetnie czuje się w obecnej roli, która pozwala jej na ciągłe doskonalenie. 
+      Absolwentka zarządzania sp. inwestycje i nieruchomości oraz studiów podyplomowych Project Management na Wydziale Nauk Ekonomicznych i Zarządzania, 
+      na Uniwersytecie Mikołaja Kopernika w Toruniu. Posiada certyfikacje Prince2, Agile PM, P3O, Management 3.0. 
+      W PMI czerpie satysfakcję z możliwości rozwoju nowych kompetencji oraz współpracy z profesjonalistami.
+    linkedInURL  : https://www.linkedin.com/in/kamila-k%C5%82osowska-10658b12b/
+  
+  - image         : images/team/mariusz.png
+    name          : Mariusz Lewandowski
+    designation   : Zespół ds. Marketingu
+    description   : >
+      Specjalista z zakresu digital marketingu. Wykładowca akademicki, szkoleniowiec, konsultant biznesowy. 
+      Od kilku lat wspiera lokalne środowisko start-upowe, organizator cyklicznych spotkań networkingowdych dla marketerów i przedstawicieli MSP. 
+      Twórca kursu video poświęconego wykorzystaniu serwisu LinkedIn w budowaniu marki osobistej, wydanego przez grupę Helion. 
+      Prywatnie fan dobrej kawy i spędzania czasu na łonie natury. 
+      Na Instagramie popularyzuje wiedzę ze swoich obszarów jako @panodmarketingu.
+    linkedInURL   : https://www.linkedin.com/in/panodmarketingu/
+    instagramURL   : https://www.instagram.com/panodmarketingu/
+
+  - image         : images/team/emilia.png
+    name          : Emilia Kucharska
+    designation   : Koordynator ds. Relacji z Uczestnikami
+    description   : >
+      Wolontariuszka PMI PC Kujawsko-Pomorskie Branch od 2019 roku. 
+      W latach 2020-2022 pełniła rolę Dyrektora Zarządzającego oddziałem. 
+      Z wykształcenia historyk. 
+      Od 15 lat zawodowo związana z branżą IT, gdzie pracuje jako Project Manager. 
+    linkedInURL  : https://www.linkedin.com/in/emilia-kucharska-34a7a398/
+
+  - image         : images/team/ania.png
+    name          : Ania Grodzicka 
+    designation   : Koordynator ds. Logistyki wydarzenia
+    description   : >
+      Project Manager w Atos Poland, członek PMO i wolontariusz PMI. Stawiam na nieszablonowe myślenie i kreatywne podejście do zarządzania projektami.
+    linkedInURL   : https://www.linkedin.com/in/anna-grodzicka-171165244/
+
+
+  - image         : images/team/nina.png
+    name          : Nina Żwak
+    designation   : Administracja programu Project Management UMK Toruń
+    description   : >
+      Administracja programu Project Management UMK Toruń
+    noLink        : true 
+
+  - image         : images/team/basia.png
+    name          : Barbara Polaszek
+    designation   : Administracja programu Project Management UMK Online
+    description   : >
+      Administracja programu Project Management UMK Online
+    linkedInURL  : https://www.linkedin.com/in/barbara-polaszek-4b6529286/
+
+  - image         : images/team/maciej_purpurowe.jpg
+    name          : Maciej Koszykowski
+    designation   : Zespół ds. współpracy z partnerami
+    description   : >
+      Specjalista w zarządzaniu międzynarodowymi projektami z wieloma zespołami. Ekspert w metodach tradycyjnych i zwinnych (agile), nowych technologiach, transformacji cyfrowej oraz IT service transition. Certyfikowany kierownik projektów (PgMP, PMP, PMI-RMP, PSM, AgilePM, PRINCE2, PRINCE2Agile, ITIL, MSP, M_o_R, SixSigma). Mentor, trener i lider społeczności PMI. Recenzent międzynarodowych standardów PMI, w tym PMBOK Guide i Standard for Program Management. Uczestnik merytoryczny projektów tłumaczenia PMBOKa, czy Kodeksu Etyki PMI na język polski. Były dyrektor PMI Kujawsko-Pomorskie i członek zarządu PMI Polska ds. Wolontariuszy. Obecnie doktorant w zakresie zastosowania sztucznej inteligencji w zarządzaniu projektami.
+    linkedInURL   : https://www.linkedin.com/in/maciejkoszykowski/
+    noLink        : true
+  
+  - image         : images/team/darek.png
+    name          : Dariusz Ciechan
+    designation   : Zespół ds. współpracy z partnerami
+    description   : >
+      Zarządza, wprowadza i doskonali zarządzanie projektami oraz zarządzanie portfelami projektów w organizacjach. 
+      Współpracuje z biznesem w celu rozwoju zarządzania projektami w ich organizacjach. 
+      Pasjonuje go podejście Flow Management, łączące Lean, Kanban, TOC oraz psychologię przepływu i motywacji. 
+      Dostarcza praktyczną wiedzę studentom studiów podyplomowych oraz słuchaczom Executive MBA na Uniwersytecie Mikołaja Kopernika, Uniwersytecie WSB, jak również uczestnikom seminariów i warsztatów. Jest oficjalnym recenzentem i współtwórcą międzynarodowych standardów PMI, a także menedżerem projektu i korektorem polskich tłumaczeń Przewodnika PMBOK®. 
+    linkedInURL   : https://www.linkedin.com/in/dariuszciechan/
+    noLink        : true 
+
+  - image         : images/team/grzegorz.png
+    name          : Grzegorz Wyrzykowski
+    designation   : Koordynator ds. technicznych
+    description   : >
+      Project Menager z 15-letnim doświadczaniem w branży IT. 
+      Prowadzi projekty w branży e-government oraz e-commerce. 
+      Od 2019 roku jest aktywnym wolontariuszem w organizacji PMI Poland Chapter. 
+      Od 2019 posiada certyfikaty: PRINCE2 oraz Certyfikat PMI POLAND CHAPTER. 
+      W 2019 zakończył studia podyplomowe: Zarządzanie projektami “Project Management” na Wydziale Nauk Ekonomicznych i Zarządzania UMK w Toruniu. 
+      Zainteresowania:  www / WCAG, e-commerce, nieruchomości, akwarystyka.
+    linkedInURL   : https://www.linkedin.com/in/grzegorz-wyrzykowski-3a8424107/
+    noLink        : true 
+
+  - image         : images/team/rafal.jpg
+    name          : Rafał Młotek
+    designation   : Lider ds. finansów
+    description   : >
+      Kierownik Projektów z doświadczeniem w prowadzeniu projektów z zakresu Business Intelligence,
+      Platform Danych, Hurtowni Danych, Zarządzania Danymi oraz CRM. 
+      Certyfikowany w zakresie PMP, PRINCE2, AgilePM, ITIL oraz ISTQB.
+      Wspierał obszary biznesowe Sprzedaży, Marketingu, Kontrolingu oraz IT.  
+      Wykształcony w obszarze prawdopodobieństwa i statystyki. 
+      Posiada wieloletnie doświadczenie w zarządzaniu zespołami IT pracującymi w metodykach zwinnych.  
+    linkedInURL   : https://www.linkedin.com/in/rafalmlotek/
+    noLink        : true 
+
+
+titleKomitet: Komitet Sterujący
+komitet:
+  - image         : images/team/rada/marlena.png
+    name          : Marlena Ciechan-Kujawa
+    designation   : prof. UMK, Dziekan WNEiZ
+    description   : >
+      Profesor w Uniwersytecie Mikołaja Kopernika w Toruniu, Dziekan Wydziału Nauk Ekonomicznych i Zarządzania UMK. 
+      Od wielu lat kieruje realizowanymi z partnerami biznesowymi studiami podyplomowymi Business Controlling i Project Management. W swoich badaniach koncentruje się na analizie uwarunkowań i mechanizmów wdrażania strategii cyfrowych i zrównoważonych oraz ich wpływu na wyniki organizacji. Ekspertka w zakresie zintegrowanych systemów zarządzania, a także projektowania modeli pomiaru oraz raportowania finansowych  i niefinansowych generatorów efektywności biznesowej.
+    linkedInURL   : https://www.linkedin.com/in/marlena-ciechan-kujawa/
+
+  - image         : images/team/rada/maciej.png
+    name          : Maciej Koszykowski
+    designation   : Lider PMI Kujawsko-Pomorskie
+    description   : >
+      Specjalista w zarządzaniu międzynarodowymi projektami z wieloma zespołami. Ekspert w metodach tradycyjnych i zwinnych (agile), nowych technologiach, transformacji cyfrowej oraz IT service transition. Certyfikowany kierownik projektów (PgMP, PMP, PMI-RMP, PSM, AgilePM, PRINCE2, PRINCE2Agile, ITIL, MSP, M_o_R, SixSigma). Mentor, trener i lider społeczności PMI. Recenzent międzynarodowych standardów PMI, w tym PMBOK Guide i Standard for Program Management. Uczestnik merytoryczny projektów tłumaczenia PMBOKa, czy Kodeksu Etyki PMI na język polski. Były dyrektor PMI Kujawsko-Pomorskie i członek zarządu PMI Polska ds. Wolontariuszy. Obecnie doktorant w zakresie zastosowania sztucznej inteligencji w zarządzaniu projektami.
+    linkedInURL   : https://www.linkedin.com/in/maciejkoszykowski/

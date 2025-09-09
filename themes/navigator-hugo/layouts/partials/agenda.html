@@ -1,0 +1,300 @@
+{{ $data := index .Site.Data }}
+
+{{ with $data.agenda }}
+{{ if .enable }}
+
+{{ "<!-- Agenda Section Section Start -->" | safeHTML }}
+
+<script>
+function toggleCollapse(id) {
+    const div = document.getElementById(id);
+    div.classList.toggle('show');  // toggles visibility
+}
+</script>
+
+<section class="service-2 section bg-gray" style="padding-bottom: 0px !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="title text-center">
+                    {{ with .topTitle }}
+                    <h4>{{ . }}</h4>
+                    {{ end }}
+                    {{ with .title }}
+                    <h2>{{ . }}</h2>
+                    <span class="border"></span>
+                    {{ end }}
+                </div>
+
+            </div>
+        </div>
+
+
+        {{ range .days }}
+
+        <div class="row justify-content-center ">
+            <div class="col">
+                <div class="title text-center">
+                    {{ with .day_title }}
+                    <h3>{{ . }}</h3>
+                    {{ end }}
+                    {{ with .day_date }}
+                    <h5>{{ . }}</h5>
+                    {{ end }}
+                </div>
+
+                <!-- going to loop per day in program per day detials -->
+                {{ $dayDate := .day_date }}
+
+                {{ range $.Site.Data.agenda.program_per_day }}
+                {{ if eq .date $dayDate }}
+
+                <!-- extracting relevant data for content generation -->
+
+                {{ $sessionsData := .sessions }}
+                {{ $slotsData := .time_slots }}
+
+                <!-- #######################################################################################################-->
+                <!-- ###### DESKTOP/TABLET - Agenda view ###################################################################-->
+                <span class="d-none d-md-block">
+                    {{ "<!-- Medium View Agenda -->" | safeHTML }}
+
+
+                    <div style="border-radius: 5px; background: #346DBC; padding-left: 36px; padding-right: 36px; padding-top: 24px; padding-bottom: 24px;">
+                        {{ range $slotsData }}
+                          <!--slot: {{.slot}} <br> -->
+                        
+                          {{$sessionsToPrint := .slot }}
+                          {{$sessionsInTheSlot := .no_of_sessions }}
+                          {{$hideTiming := .hide_timing}}
+                          {{$showOnDesktop := .show_on_desktop }}
+
+                          {{$end := .end }} <!-- to do not draw last hr -->
+                        
+                          {{$rightBorder := " none " }} <!-- no border if not splited -->
+
+                          {{$tableClass := "col-md-12" }}
+                          {{ if eq 2 $sessionsInTheSlot }}
+                                {{ $tableClass = "col-md-6" }}
+                                {{$rightBorder = " solid " }}
+                                <!-- $leftBorder =                         -->
+                          {{ end }}
+
+                        <div class="row">
+
+
+                            {{ range $sessionsData }} <!-- Sessions printing border-left: none !important; border-top: none !important; border-bottom: none !important; border-right: 1px solid white !important;-->
+
+                            {{ $sessionSlot := .slot}}
+
+                            {{ if eq .slot $sessionsToPrint }}
+                            <div class="{{$tableClass}}" style="border-right: 1px {{$rightBorder}} white !important; border-left: none !important; border-top: none !important; border-bottom: none !important;">
+                                <div class="service-item" id="headingOne" style=" background: #346DBC !important; color: white !important; border: none !important">
+                                    <h5 class="mb-0">
+
+                                        <h5 style="margin-bottom: 0px;"> 
+                                            
+                                            {{ if ne true $hideTiming}}
+                                            <span style="font-size: large; text-align: left; font-weight: lighter;">
+                                                {{ $sessionsToPrint }} </span>
+                                            {{ end }}
+
+                                            <br class="d-md-none d-lg-none">
+                                            {{ if .who}}
+                                            <span style="text-align: left; letter-spacing: 0.05em; ">
+
+                                                &nbsp;&nbsp;&nbsp;
+                                                <br class="d-md-none d-lg-none">
+                                                <span class="d-none d-md-block"> &nbsp; </span>
+                                                {{ .who | markdownify}} </span>
+                                            {{ end }}
+                                            <br class="d-md-none d-lg-none">
+
+                                            {{ if .title}}
+                                            <span style="font-weight: normal; ">
+                                                <span class="d-none d-md-block"> &nbsp; </span>
+
+                                                {{ if eq true $showOnDesktop }}
+                                                   <img src="/images/{{ .icon }}" alt="{{ .icon }}" width="28" height="28" />
+                                                    &nbsp;&nbsp;
+                                                {{end}}
+
+                                                {{ .title | markdownify }}
+                                            </span>
+                                            {{end}}
+                                        </h5>
+                                        <br>
+
+                                       {{ if ne true $hideTiming}} 
+                                       <button class="btn btn-link" style="font-size: small; padding-top: 0px; color:white !important"
+                                               onclick="toggleCollapse('collapseOne{{.number}}')">
+                                             rozwiń >>
+                                        </button>
+
+                                        <div id="collapseOne{{.number}}" class="collapse" >
+                                                <div class="card-body">
+                                                <p style="color:white !important">{{ .description | markdownify }}</p>
+                                                </div>
+                                        </div>
+
+                                        {{end}}
+
+                                    </h5>
+
+
+                                </div>
+
+                                {{$rightBorder = " none " }}
+
+                            </div>
+                            {{ end }}
+
+                            {{ end }}
+
+                            {{ if ne true $end}}
+                            <div class="col-sm-12" 
+                                  style=" background: #346DBC !important; color: white !important; border-bottom:  1px solid white; border-left: none !important; border-top: none !important; border-right: none !important;  ">
+                            </div>
+
+                            {{end}}
+                        </div>
+
+                        {{ end}}
+                    </div>
+
+                </span> <!-- END OF DESKTOP VIEW -->
+
+                <!-- #######################################################################################################-->
+                <!-- ######## Phone/Small mobile device - Agenda view ######################################################-->
+                <span class="d-md-none d-sm-block">
+                      {{ "<!-- Mobile Phone View Agenda -->" | safeHTML }} 
+
+                    <div style="border-radius: 5px; background: #346DBC; padding-left: 36px; padding-right: 36px; padding-top: 24px; padding-bottom: 24px;">
+                        {{ range $slotsData }}
+                          <!--slot: {{.slot}} <br> -->
+                        
+                          {{$sessionsToPrint := .slot }}
+                          {{$sessionsInTheSlot := .no_of_sessions }}
+                          {{$hideTiming := .hide_timing}}
+                          {{$hideExpand := .hide_expand}}
+                          {{$showOnMobile := .show_on_mobile }}
+                          {{$end := .end }} <!-- to do not draw last hr -->
+                        
+                          {{$rightBorder := " none " }} <!-- no border if not splited -->
+
+                          {{$tableClass := "col-md-12" }}
+                          {{ if eq 2 $sessionsInTheSlot }}
+                                {{ $tableClass = "col-md-6" }}
+                                {{$rightBorder = " solid " }}
+                                <!-- $leftBorder =                         -->
+                          {{ end }}
+
+                        <div class="row">
+
+
+                            {{ range $sessionsData }}
+
+                            {{ $sessionSlot := .slot}}
+
+                            {{ if eq false $showOnMobile }}
+                               {{ $sessionsToPrint = "skip this slot"}}
+                            {{ end}}
+
+                            {{ if eq .slot $sessionsToPrint }}
+                            <div class="col-md-12" style="border: none !important;">
+                                <div class="service-item" id="headingOne" style=" background: #346DBC !important; color: white !important; border: none !important">
+                                    <h5 class="mb-0">
+
+                                            {{ if ne true $hideTiming}}
+                                            <span style="font-size: large; text-align: left; font-weight: lighter;">
+                                                {{ $sessionsToPrint }} 
+                                            </span>
+                                            <br><br>
+                                            {{ end }}
+
+                                            {{ if eq 2 $sessionsInTheSlot }}
+                                                 {{ $hideTiming = true }}
+                                            {{end}}
+
+
+
+                                            <div class="row">
+                                                <div class="col-auto text-white p-2">
+                                                   {{ if .icon}}
+                                                       <img src="/images/{{ .icon }}" alt="{{ .icon }}" width="28" height="28" />
+                                                   {{end}}
+                                                </div>
+                                                <div class="col text-white p-2">
+                                                   {{ if .who}}
+                                                        <span style="text-align: left; letter-spacing: 0.05em; " >
+                                                        {{ .who | markdownify}} 
+                                                        </span>
+                                                        <br> 
+                                                    {{ end }} 
+
+                                                        <span style="font-weight: normal; display: block; padding-top: 8px;  ">                                  
+                                                        {{ .title | markdownify }} 
+                                                       </span>
+
+                                                {{ if ne true $hideExpand}} 
+                                                <button class="btn btn-link" style="font-size: small; padding-top: 0px; color:white !important; padding: 0px;"
+                                                        onclick="toggleCollapse('collapseMobile{{.number}}')">
+                                                        rozwiń >>
+                                                    </button>
+                                                       
+                                                </div>
+                                                {{end}}
+                                            </div>                                         
+
+
+
+                                        <div id="collapseMobile{{.number}}" class="collapse" >
+                                                <div class="card-body">
+                                                <p style="color:white !important; font-weight: lighter;">{{ .description | markdownify }}</p>
+                                                </div>
+                                        </div>
+
+
+
+                                    </h5>
+
+
+                                </div>
+
+                                {{$rightBorder = " none " }}
+
+                            </div>
+                            {{ end }}
+
+                            {{ end }}
+
+                            {{ if ne true $end}}
+                            <div class="col-sm-12" 
+                                  style=" background: #346DBC !important; color: white !important; border-bottom:  1px solid white; border-left: none !important; border-top: none !important; border-right: none !important;  ">
+                            </div>
+
+                            {{end}}
+                        </div>
+
+                        {{ end}}
+                    </div>
+
+                </span> <!-- END OF MOBILE VIEW -->
+                {{ end }} <!-- if eq .date $dayDate  -->
+                {{ end }} <!-- range program per day DAY LOOP -->
+            </div>
+
+        </div> <!-- end of class row justify-content-center -->
+
+        {{ end }} <!--END of hugo loop for days generation range $.Site.Data.agenda.program_per_da -->
+
+    </div> <!-- end of container classs-->
+
+
+</section>
+
+{{ "<!-- Agenda Section End -->" | safeHTML }}
+
+{{ end }} <!--END of with $data.agenda -->
+
+{{ end }} <!--END of if .enable -->

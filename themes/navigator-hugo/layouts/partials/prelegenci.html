@@ -1,0 +1,101 @@
+{{ $data := index .Site.Data }}
+{{ with $data.prelegenci }}
+    {{ if .enable }}
+    {{ "<!-- About Section Start -->" | safeHTML }}
+    <section class="about section-sm" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title text-center">
+                        {{ with .topTitle }}
+                            <h4>{{ . }}</h4>
+                        {{ end }}
+                        {{ with .title }}
+                            <h2>{{ . }}</h2>
+                            <span class="border"></span>
+                        {{ end }}
+                        {{ with .subtitle }}
+                            <p>{{ . }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+                <p style="color: black !important">
+                 {{ .message | markdownify }}
+                 </p>
+                 <br>
+            {{ if .show_items }}
+            {{ range .item }}
+                    <div class="row mb-50 justify-content-center">
+                        <div class="col-md-5 col-sm-12 text-center offset-md-1"                          
+                           style="padding-top: 9px; padding-bottom: 50px;" >
+                            <img src="{{ .image | absURL }}" class="img-fluid rounded shadow" alt="about-image">
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            <div class="content" style="padding-top: 0px; margin-top: 0px;">
+                                <h3>{{ .title }}
+
+                    <ul class="list-inline social-icon">
+                        <li class="list-inline-item">
+                            <a href="{{.linkedin_post}}" target="_blank">
+                                <i class="tf-ion-social-linkedin"></i>
+                            </a>
+                        </li>                        
+                    </ul></h3>
+
+
+                                <p class="readMoretext" id="readMoretext{{.id}}" style="padding-top: 0px; margin-top: 0px;">
+                                     {{ .description | markdownify }}
+                                </p>
+
+                                <a href="javascript:void(0);" id="readMoreBtn{{.id}}" class="readMoreBtn" >... czytaj więcej</a>
+
+                                <script>
+
+                                    function checkReadMoreBtn(id) {
+                                        const text = document.getElementById(`readMoretext${id}`);
+                                        const btn = document.getElementById(`readMoreBtn${id}`);
+
+                                        if (text && btn) {
+                                            if (text.scrollHeight <= text.clientHeight) {
+                                                btn.style.display = "none"; // ukryj przycisk
+                                            } else {
+                                                btn.style.display = "inline"; // pokaż przycisk
+                                            }
+                                        }
+                                    }
+
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        checkReadMoreBtn("{{.id}}");
+                                    });
+
+                                    window.addEventListener("resize", function() {
+                                        checkReadMoreBtn("{{.id}}");
+                                    });
+                                    
+                                    document.getElementById("readMoreBtn{{.id}}").addEventListener("click", function() {
+                                        var text = document.getElementById("readMoretext{{.id}}");
+                                        var btn = document.getElementById("readMoreBtn{{.id}}");
+                                
+                                        if (text.style.display === "-webkit-box") {
+                                            text.style.display = "block";
+                                            btn.innerHTML = " << zwiń opis";
+                                        } else {
+                                            text.style.display = "-webkit-box";
+                                            btn.innerHTML = "... czytaj więcej";
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                <br><br>
+            {{ end }}
+          {{ end }}
+        </div>
+    </section>
+    {{"<!-- About section End -->" | safeHTML}}
+    {{ end }}
+{{ end }}

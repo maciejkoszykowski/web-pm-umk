@@ -1,0 +1,14 @@
+name = "Navigator Hugo - update for a conferce page by Maciej Koszykowski"
+license = "MIT"
+licenselink = "https://github.com/gethugothemes/navigator-hugo/blob/master/LICENSE"
+description = "as in the name - you will not find the previous Navigator Hugo here"
+homepage = " "
+demosite = " "
+tags = ['landing-page', 'conference',  'hugo-theme', 'hugo-templates', 'bootstrap', 'responsive', 'clean', 'simple', 
+ 'custom-themes', 'mobile', 'flexbox', 'minimalistic', 'gethugothemes']
+features = ['bootstrap4','responsive']
+min_version = "0.62.0"
+
+[author]
+  name = "Gethugothemes - update by Maciej Koszykowski"
+  homepage =  " "

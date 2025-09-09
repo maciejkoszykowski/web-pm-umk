@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+
+
+{{- partial "head.html" . -}}
+
+<body id="body">
+
+
+{{ "<!-- Google Tag Manager (noscript) ## baseof.html ##--> " | safeHTML }}
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z75DKN4M2G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z75DKN4M2G');
+</script>
+
+
+{{ "<!-- End Google Tag Manager (noscript) --> " | safeHTML }}
+
+    
+{{ partial "preloader.html" . }}
+
+{{ "<!-- HEADER partial --> " | safeHTML }}
+
+    {{- partial "menu.html" . -}}
+    <div id="content">
+        {{- block "main" . }}{{- end }}
+    </div>
+
+{{ " <!-- FOOTER partial --> "| safeHTML }}
+{{- partial "footer.html" . -}}
+
+
+</body>
+
+</html>

@@ -116,27 +116,15 @@ name = "Strona Głowna"
 url = "/"
 weight = 1
 
-
-#[[menu.nav]]
-# name = "Nasz Zespół"
-# url = "#Prelegenci"
-# weight = 7
-
-#[[menu.nav]]
-#name = "Nasz Zespół"
-#url = "#Prowadzacy"
-#weight = 10
-
-
 [[menu.nav]]
 name = "Program Studiów"
-url = "#Agenda"
+url = "#Program"
 weight = 14
 
 
 [[menu.nav]]
 name = "Rekrutacja"
-url = "#Bilety"
+url = "#Rekrutacja"
 weight = 17
 
 [[menu.nav]]
@@ -146,7 +134,7 @@ weight = 18
 
 [[menu.nav]]
 name = "Kontakt"
-url = "#Lokalizacja"
+url = "#Kontakt"
 weight = 30
 
 [[menu.nav]]

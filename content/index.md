@@ -1,7 +1,7 @@
 ---
 title: "Strona Główna"
-description: "To jest opis strony głównej"
-date: 2024-09-02T12:00:00Z
+description: " "
+date: 2025-09-11T12:00:00Z
 draft: false
 
 # enable: false, aby ukryć opis 

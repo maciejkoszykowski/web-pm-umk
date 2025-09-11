@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+  {{ partial "hero.html" . }}
+
+  <div id="Opis"></div>
+
+  {{ partial "opis.html" . }}
+
+  <div id="Prelegenci"></div>
+
+  {{ partial "prelegenci.html" . }}
+
+  <div id="Prowadzacy"></div>
+
+  {{ partial "speakers.html" . }}
+
+  <div id="Program"></div>
+  {{ partial "agenda.html" . }}
+
+  <div id="Partnerzy"></div>
+  {{ partial "partnerzy.html" . }}
+
+  <div id="Zespol"></div>
+  {{ partial "team.html" . }}
+
+  <div id="Rekrutacja"></div>
+  {{ partial "bilety.html" . }}
+
+   <!-- TODO: ??? -->
+  {{ partial "_testimonial.html" . }}
+
+  <div id="Kontakt"></div>
+  {{ partial "lokalizacja.html" . }}
+
+{{ end }}

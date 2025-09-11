@@ -55,6 +55,8 @@
 <link rel="stylesheet" href="{{ `plugins/slick-carousel/slick/slick-theme.css` | absURL }}">
 {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
+<link rel="stylesheet" href="{{ `css/page-variables.css` | absURL  }}" media="screen">
+
 {{ $styles := resources.Get "css/style.css" | minify}}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 

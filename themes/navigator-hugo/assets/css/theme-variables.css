@@ -1,0 +1,10 @@
+:root {
+  --theme-right-color: #AA2896;
+  --theme-left-color: #0050AA;
+}
+/*
+ var(--theme-right-color, #AA2896)
+ var(--theme-left-color, #0050AA)
+*/
+
+/* have page-variables.css in your static root folder in hugo project */

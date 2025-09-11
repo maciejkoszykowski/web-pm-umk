@@ -7,8 +7,8 @@ subtitle : >
      Następnie kliknij przycisk, który przekieruje Cię na stronę wydziału WNEiZ. 
      Znajdziesz tam szczegółowe informacje, wymagane dokumenty (w tym wzór podania).”
 item  :
-  - name        : Edycja Toruń
-    price       : Edycja Toruń
+  - name        : Edycja
+    price       : Toruń
     description :
     featurelist :
       - item: cena obowiązuje w terminie
@@ -20,8 +20,8 @@ item  :
     btnText     : Złoż Podanie
     btnURL      : https://www.econ.umk.pl/studia-podyplomowe/zarzadzanie-projektami-project-management/
 
-  - name        : Edycja  Online
-    price       : Edycja  Online
+  - name        : Edycja
+    price       : Online
     description :
     featurelist :
       - item: cena obowiązuje w terminie

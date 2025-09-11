@@ -47,10 +47,13 @@
                     <a href="tel: {{ .Site.Params.contact.phone }}" target="_blank" style="font-size: 50px; color: black;">
                         <i class="tf-ion-ios-telephone"></i>
                     </a>
-                    <h4>Telefon w razie potrzeby</h4>
+                    <h4>Telefony</h4>
                     <p>  </p>
                     <p>
-                         {{ with .Site.Params.contact.phone }}  {{.}} {{ end }} 
+                         {{ with .Site.Params.contact.phone }}  {{. | safeHTML }} {{ end }} 
+                    </p>
+                                        <p>
+                         {{ with .Site.Params.contact.phone2 }}  {{. | safeHTML}} {{ end }} 
                     </p>
                 </div>
             </div>

@@ -50,17 +50,16 @@ description =  "Autorski program Uniwersytetu Mikołaja Kopernika studiów podyp
 
 #### LOG files in one place 
 logo = "images/logo-UMK-Project-Management-navbar.png"
-logo_pmi = "images/logo_pmi_kuj_pom_50.png" # TODO: remove
-logo_umk = "images/logo_WNEiZ_UMK_50.png"  # TODO: remove 
+logo_footer = "images/logo_WNEiZ_UMK_50.png"
 
 # footer settings 
-footerServiceTitle = "images/poland_logo-small.png"
+footerServiceTitle = "images/logo_WNEiZ_UMK_50.png"
 footerQuicklinkTitle = "Mapa Strony"
 footerAboutTitle = "Organizator"
-PMI_PC="Wydział Nauk Ekonomicznych i Zarządzania"
-PMI_PC_pl="UMK w Toruniu"
-PMI_PC_address_ul="ul. Gagarina 13a"
-PMI_PC_address_code="87-100 Toruń"
+PMI_PC="WNEiZ UMK w Toruniu"
+PMI_PC_pl="ul. Gagarina 13a"
+PMI_PC_address_ul="87-100 Toruń"
+PMI_PC_address_code=" "
 PMI_PC_NIP= "   "
 
 # cookies
@@ -74,13 +73,21 @@ expire_days = 15
 # too static to be yaml ?
 [params.contact]
 enable = true
-topTitle = "Project Management UMK | Studia pod patronatem PMI PC"
-title = "Dane kontaktowe i lokalizacja"
+topTitle = "Project Management UMK"
+title = "Kontakt"
 subtitle = " "
 address = "Wydział Nauk Ekonomicznych i Zarządzania"
 address_line2 = "UMK w Toruniu"
 address_line3 = "ul. Gagarina 13a, 87-100 Toruń"
-phone = "  " # general phone 
+phone = " Edycja Toruń  <br> +48 56 611 47 66 " # general phone 
+phone2 = " Edycja 'Online' <br>  +48 56 611 46 27 "
+
+####
+## +48 56 611 47 66
+## ninazwak@umk.pl
+## +48 56 611 46 27
+### barbara.polaszek@umk.pl
+
 
 facebook = "https://www.facebook.com/projectmanagementUMK/"
 linkedin = "https://www.linkedin.com/company/wneizumk"
@@ -91,12 +98,6 @@ linkedin = "https://www.linkedin.com/company/wneizumk"
 map_url = "https://www.google.com/maps?q=Wydział+Nauk+Ekonomicznych+i+Zarządzania+UMK+w+Toruniu&output=embed"
 map_pin_url = "https://maps.google.com/maps?q=Wydzia%C5%82+Nauk+Ekonomicznych+i+Zarz%C4%85dzania+UMK+w+Toruniu"
 mapMarker = "images/marker.png"
-
-####
-## +48 56 611 47 66
-## ninazwak@umk.pl
-## +48 56 611 46 27
-### barbara.polaszek@umk.pl
 
 
 ##################################

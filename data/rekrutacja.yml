@@ -1,0 +1,35 @@
+enable  : true
+topTitle: Project Management UMK
+title   : Rekrutacja
+subtitle : >
+     <br> 
+     Wybierz interesującą Cię edycję studiów. 
+     Następnie kliknij przycisk, który przekieruje Cię na stronę wydziału WNEiZ. 
+     Znajdziesz tam szczegółowe informacje, wymagane dokumenty (w tym wzór podania).”
+item  :
+  - name        : Edycja Toruń
+    price       : Edycja Toruń
+    description :
+    featurelist :
+      - item: cena obowiązuje w terminie
+      - item: 14 lipca 2025 – 20 września 2025
+      - item: " "
+      - item: udział we wszystkich prelekcjach podczas konferencji w dniu 25 października
+      - item: poczęstunek w trakcie przerw
+      # - item: warsztat oddzielnie płatny 
+    btnText     : Złoż Podanie
+    btnURL      : https://www.econ.umk.pl/studia-podyplomowe/zarzadzanie-projektami-project-management/
+
+  - name        : Edycja  Online
+    price       : Edycja  Online
+    description :
+    featurelist :
+      - item: cena obowiązuje w terminie
+      - item: 21 września 2025 – 23 października 2025
+      - item: " "
+      - item: udział we wszystkich prelekcjach podczas konferencji w dniu 25 października
+      - item: poczęstunek w trakcie przerw
+      # - item: warsztat oddzielnie płatny 
+    btnText     : Złoż Podanie
+    btnURL      : https://www.econ.umk.pl/studia-podyplomowe/zarzadzanie-projektami-project-management-edycja-online/
+ 

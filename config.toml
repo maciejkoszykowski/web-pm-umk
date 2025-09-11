@@ -12,8 +12,8 @@ languageCode = "pl"
 # google analytics tracking id
 # googleAnalytics = "DIFFRENT" # NOT USED HARDCODED IN THEME ###
 
-baseURL = "https://projectmanagement.umk.pl/" 
-homeURL = "https://projectmanagement.umk.pl/"  # Allows easy navigation back to the current edition from previous ones
+#baseURL = "https://projectmanagement.umk.pl/" 
+baseURL = "https://pmcc.pmi.org.pl/umk-pm-draft"
 
 ################
 #  favicon.ico #

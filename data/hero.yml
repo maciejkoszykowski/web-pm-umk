@@ -11,7 +11,7 @@ subheading: "Studia pod patronatem PMI PC"
 ## TIMER + other settings 
 
 # comment if not needed
-timer_conf_start_date: "2025-10-25T10:00:00" # timer jest wylączony 
+#timer_conf_start_date: "2025-10-25T10:00:00" # timer jest wylączony 
 
 show_more_msg: false
 

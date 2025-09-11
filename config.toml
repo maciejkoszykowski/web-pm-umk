@@ -49,7 +49,7 @@ author = "UMK"
 description =  "Autorski program Uniwersytetu Mikołaja Kopernika studiów podyplomowych &#8222;Project Management&#8221;, pod patronatem Project Management Institute Poland Chapter."
 
 #### LOG files in one place 
-logo = "images/logo-UMK-Project-Management.png"
+logo = "images/logo-UMK-Project-Management-navbar.png"
 logo_pmi = "images/logo_pmi_kuj_pom_50.png" # TODO: remove
 logo_umk = "images/logo_WNEiZ_UMK_50.png"  # TODO: remove 
 
@@ -112,16 +112,9 @@ only_back_home = "Start"
 
 # Navbar Menus
 [[menu.nav]]
-name = "Start"
+name = "Strona Głowna"
 url = "/"
 weight = 1
-
-
-# Navbar Menus
-[[menu.nav]]
-name = "Galeria"
-url = "/galeria"
-weight = 5
 
 
 #[[menu.nav]]
@@ -142,7 +135,7 @@ weight = 14
 
 
 [[menu.nav]]
-name = "Bilety"
+name = "Rekrutacja"
 url = "#Bilety"
 weight = 17
 
@@ -154,22 +147,12 @@ weight = 18
 [[menu.nav]]
 name = "Kontakt"
 url = "#Lokalizacja"
-weight = 22
+weight = 30
 
 [[menu.nav]]
 name = "Zespół"
 url = "#Zespol"
 weight = 25
-
-[[menu.nav]]
-name = "Regulamin"
-url = "regulamin"
-weight = 28
-
-[[menu.nav]]
-name = "2024"
-url = "https://pmcc.pmi.org.pl/2024"
-weight = 30
 
 # Footer Quick links Menu
 [[menu.quicklink]]

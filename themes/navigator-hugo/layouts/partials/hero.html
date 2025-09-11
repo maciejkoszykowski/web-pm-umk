@@ -5,45 +5,33 @@
 {{ "<!-- Hero Area -->" | safeHTML }}
 <section class="hero-area hero-div-image">
     <div class="container hero-content-up">
+        <!-- ####################################################  -->
+        <!--              Headings    -->
+        <!-- ####################################################  -->
+
         <div class="row">
-            <!-- div class="col-md-6">
-                <div class="video-player">
-                    <img class="img-fluid rounded" src="{{ with .Site.Params.hero.videoThumb }}{{.| absURL }}{{ end }}" alt="video-thumb">
-                    < !--
-                    <a class="play-icon" href="javascript:void(0)">
-                        <i class="tf-ion-play" data-video="{{ with .Site.Params.hero.videoURL }}{{.}}{{ end }}?autoplay=1"></i>
-                    </a>--
-                    <br><br><br>
-                </div>
-            </div -->
             <div class="col-md-12">
                 <div class="block">
                     {{ with .main_heading }}
-                    <span class="d-none d-md-block"> 
-                        <h2 style="background-color: #aa2896; color: white; font-weight: bolder; width: fit-content; padding-bottom: 0px; margin-bottom: 0px; padding-left: 12px; padding-right: 12px;"> {{ . }}</h2>
-                    </span>
-                    <span class="d-md-none d-sm-block"> 
-                        <h2 style="background-color: #aa2896; color: white; font-size: x-large; font-weight: bolder; width: fit-content; padding-bottom: 0px; margin-bottom: 0px; padding-left: 12px; padding-right: 12px;"> {{ . }}</h2>
-                    </span>
-
+                      <h2 class="hero-heading"> {{ . }}</h2>
                     {{ end }}
                     {{ with .subheading }}
-                    <span class="d-none d-md-block"> 
-                        <h3 style="background-color: #2053A6; color: white; font-weight: normal; width: fit-content; padding-bottom: 0px; padding-left: 12px; padding-right: 12px; padding-bottom: 4px;"> {{ . | plainify }}</h3>
-                    </span>
-                    <span class="d-md-none d-sm-block"> 
-                        <h3 style="background-color: #2053A6; color: white; font-size: medium; font-weight: normal; width: fit-content; padding-bottom: 0px; padding-left: 12px; padding-right: 12px; padding-bottom: 4px;"> {{ . | safeHTML  }}</h3>
-                    </span>
+                        <h3 class="hero-subheading"> {{ . | plainify }}</h3>
                     {{ end }}
                 </div>
             </div>
         </div>
+
+         <!-- #### END OF Headings    --> 
+
         <div class="row">
             <div class="col-md-12">
                 <div class="block">
                     <br><br><br> 
      
-
+                    <!-- ####################################################  -->
+                    <!--  MORE MESSAGES  TODO: PM CONF 2026  , I don't do refactor now -->
+                    <!-- ####################################################  -->
                     {{ if .show_more_msg }}
 
                     <h3 style="font-size: x-large; letter-spacing: 0.1em; padding-left: 12px; color: white;">{{.invite_txt}}</h3>
@@ -62,141 +50,47 @@
                              {{ .day2_date }} </h3>
 
                     {{ end }}
-<br><br> 
+                    <!-- #### END OF Headings    -->                      
+                    <br><br> 
 
-<!-- TODO refactor timer code and create a kind of plugin seperate css and js for sure, html can be a enabler -->
-<style>
-.fs-timer {
-  font-size: 1rem; /* Default mobile size */
-}
+                    <!-- ####################################################  -->
+                    <!--   TIMER PART  -->
+                    <!-- ####################################################  -->
 
-@media (min-width: 768px) {
-  .fs-timer {
-    font-size: 1.5rem; /* Medium devices */
-  }
-}
+                    {{ with .timer_conf_start_date}} <!-- timer block end -->
 
-@media (min-width: 992px) {
-  .fs-timer {
-    font-size: 2rem; /* Large devices */
-  }
-}
+                                          <div id="countdown-target" data-date="{{ . }}" style="display: none;"></div>
 
-.fs-timer-label {
-  font-size: 0.75rem; /* Default mobile size */
-}
+                                          <div class="timer-wrapper">
+                                            <div class="timer-box">
+                                              <div class="fs-timer" id="days">00</div>    
+                                              <div class="fs-timer-label">Dni</div>
+                                            </div>
+                                            <div class="timer-box">
+                                              <div class="fs-timer" id="hours">00</div>
+                                              <div class="fs-timer-label">Godziny</div>
+                                            </div>
+                                            <div class="timer-box">
+                                              <div class="fs-timer" id="minutes">00</div>
+                                              <div class="fs-timer-label">Minuty</div>
+                                            </div>
+                                            <div class="timer-box">
+                                              <div class="fs-timer" id="seconds">00</div>
+                                              <div class="fs-timer-label">Sekundy</div>
+                                            </div>
+                                          </div>
 
-@media (min-width: 768px) {
-  .fs-timer-label {
-    font-size: 0.75rem; /* Medium devices */
-  }
-}
+                                          {{ $timer := resources.Get "js/timer.js" | resources.Minify | resources.Fingerprint }}
+                                          <script src="{{ $timer.RelPermalink }}" defer></script>
 
-@media (min-width: 992px) {
-  .fs-timer-label {
-    font-size: 1rem; /* Large devices */
-  }
-}
-
-.timer-box {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 0.5rem;          /* Smaller padding for mobile */
-  border-radius: 0.4rem;   
-  min-width: 70px;          /* Narrower box */
-}
-
-@media (min-width: 768px) {
-  .timer-box {
-    padding: 0.75rem;
-    border-radius: 0.4rem;
-    min-width: 70px;
-  }
-}
-
-@media (min-width: 992px) {
-  .timer-box {
-    padding: 1rem;
-    border-radius: 0.4rem;
-    min-width: 80px;
-  }
-}
-
-.timer-wrapper {
-  display: flex;
-  gap: 1rem;
-  font-family: sans-serif;
-  text-align: center;
-  justify-content: flex-start; /* default for medium and up */
-}
-
-@media (max-width: 767.98px) {
-  .timer-wrapper {
-    justify-content: center;
-    flex-wrap: wrap; /* optional: allows elements to go to next line */
-  }
-}
-
-</style>
-
-<div id="countdown-target" data-date="{{ .timer_conf_start_date }}" style="display: none;"></div>
-
-<div class="timer-wrapper">
-  <div class="timer-box">
-    <div class="fs-timer" id="days">00</div>    
-    <div class="fs-timer-label">Dni</div>
-  </div>
-  <div class="timer-box">
-    <div class="fs-timer" id="hours">00</div>
-    <div class="fs-timer-label">Godziny</div>
-  </div>
-  <div class="timer-box">
-    <div class="fs-timer" id="minutes">00</div>
-    <div class="fs-timer-label">Minuty</div>
-  </div>
-  <div class="timer-box">
-    <div class="fs-timer" id="seconds">00</div>
-    <div class="fs-timer-label">Sekundy</div>
-  </div>
-</div>
-
-<script>
-  function updateCountdown() {
-    const targetElement = document.getElementById("countdown-target");
-    const targetDateStr = targetElement.getAttribute("data-date");
-    const targetDate = new Date(targetDateStr);
-    const now = new Date();
-
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      document.getElementById("days").textContent = "00";
-      document.getElementById("hours").textContent = "00";
-      document.getElementById("minutes").textContent = "00";
-      document.getElementById("seconds").textContent = "00";
-      return; // zatrzymujemy działanie po zakończeniu odliczania
-    }
-
-    const seconds = Math.floor((diff / 1000) % 60);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    document.getElementById("days").textContent = String(days).padStart(2, '0');
-    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-  }
-
-  // aktualizuj co sekundę
-  setInterval(updateCountdown, 1000);
-  // wykonaj od razu przy załadowaniu
-  updateCountdown();
-</script>
-
-                <!-- key dates presented -->
+                    {{ end }} <!-- ###  timer block end -->
+               
                 </div>
             </div>
 
+            <!-- ####################################################  -->
+            <!--   CALL FOR ACTION || BUTTON   -->
+            <!-- ####################################################  -->
             <div class="col-sm-1 d-block d-sm-none d-flex justify-content-center">
                 <div class="block"> 
                 {{ if .button }}
@@ -225,27 +119,36 @@
             
         </div>
 
+        <!-- ####################################################  -->
+        <!--               Organizations listing     -->
+        <!-- ####################################################  -->
         <div class="row">
             <div class="col-md-6">
                 <div class="block">
-                    <br> <br> <br> 
-                        
-                    <h5 style="color: white; padding-left: 12px;"> Organizatorzy </h5> <br>
+                    <br> <br> <br>
+                     {{ with .org_title}}                         
+                        <h5 style="color: white; padding-left: 12px;"> {{ . }}</h5> <br>
+                     {{ end }}
                     <div class="row">
+                         {{with .org_logo1}}
                         <div class="col-md-6 col-sm-12">
-                            <img class="mx-auto d-none d-md-block" style="padding-top: 9px; padding-bottom: 55px;" src="{{ site.Params.logo_pmi | absURL }}" alt="logo">
-                            <img class="mx-auto d-md-none d-sm-block" style="padding-left: 6px; padding-top: 9px; padding-bottom: 55px;" src="{{ site.Params.logo_pmi | absURL }}" alt="logo">
+                            <img class="mx-auto d-none d-md-block" style="padding-top: 9px; padding-bottom: 55px;" src="{{ . | absURL }}" alt="logo 1">
+                            <img class="mx-auto d-md-none d-sm-block" style="padding-left: 6px; padding-top: 9px; padding-bottom: 55px;" src="{{ .  | absURL }}" alt="logo 1">
                         </div> 
-
+                        {{end}}
+                        {{ with .org_logo2}}
                         <div class="col-md-6 col-sm-12">
-                            <img class="mx-auto d-none d-md-block" style="padding-left: 50px;"src="{{ site.Params.logo_umk | absURL }}" alt="logo">
-                            <img class="mx-auto d-md-none d-sm-block" style="padding-left: 11px;"src="{{ site.Params.logo_umk | absURL }}" alt="logo">
+                            <img class="mx-auto d-none d-md-block" style="padding-left: 50px;"src="{{ .  | absURL }}" alt="logo 2">
+                            <img class="mx-auto d-md-none d-sm-block" style="padding-left: 11px;"src="{{ . | absURL }}" alt="logo 2">
                         </div>
+                        {{end}}
                     </div>
 
                 </div>
             </div>
         </div>
+        <!-- ### end of organization listing block -->
+
     </div>
 </section>
 {{ end }}

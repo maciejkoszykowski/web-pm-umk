@@ -612,161 +612,6 @@ a:focus, a:hover {
   margin: 0;
 }
 
-.hero-area {
-  padding: 150px 0;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* background: #1f2532;*/
-  
-    background-image: url('hero-background.jpg');
-    background-size: cover; /* This will make the image cover the entire div */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 100%; /* Set the width of the div */
-   /* height: 400px; /* Set the height of the div */
-  
-
-}
-
-.hero-area:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(31, 37, 50, 0.69);  /* Grey  #1f2532; overlay with 50% opacity */
-  z-index: 1;
-}
-
-.hero-content-up {
-  position: relative;
-  z-index: 2; /* Ensures the content is above the overlay */
-  color: white; /* Adjust text color to be visible against the background */
-}
-
-@media (max-width: 480px) {
-  .hero-area {
-    padding: 80px 0;
-  }
-}
-
-.hero-area .block {
-  color: #fff;
-  padding-left: 30px;
-}
-
-@media (max-width: 480px) {
-  .hero-area .block {
-    padding: 0;
-  }
-}
-
-.hero-area .block h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-area .block p {
-  color: #707d8f;
-  margin-bottom: 20px;
-}
-
-.hero-area .block .list-inline {
-  margin-top: 50px;
-}
-
-.hero-area .block .btn-main, .hero-area .block .btn-main-sm {
-  margin-right: 8px;
-}
-
-.video-player iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.video-player .play-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.video-player .play-icon:hover i {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.video-player .play-icon i {
-  margin-left: 3px;
-  height: 80px;
-  width: 80px;
-  border-radius: 50px;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-  background: #fff;
-  color: #AA2896 ;
-  line-height: 80px;
-  font-size: 30px;
-  margin-left: 5px;
-}
-
-.hero-area-video {
-  height: 100vh;
-  position: inherit !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-area-video .block {
-  color: #fff;
-  text-align: center;
-}
-
-.hero-area-video .block h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.hero-area-video .block p {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-.hero-area-video .block .btn-main, .hero-area-video .block .btn-main-sm {
-  margin-top: 20px;
-}
 
 .dark-bg {
   background: rgba(0, 0, 0, 0.7);
@@ -1928,3 +1773,206 @@ Prelegenci
   
 }
 
+/* Timer Hero Function */
+/* add 2025 for PMCONF2025 */
+
+.fs-timer {
+  font-size: 1rem; /* Default mobile size */
+}
+
+@media (min-width: 768px) {
+  .fs-timer {
+    font-size: 1.5rem; /* Medium devices */
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-timer {
+    font-size: 2rem; /* Large devices */
+  }
+}
+
+.fs-timer-label {
+  font-size: 0.75rem; /* Default mobile size */
+}
+
+@media (min-width: 768px) {
+  .fs-timer-label {
+    font-size: 0.75rem; /* Medium devices */
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-timer-label {
+    font-size: 1rem; /* Large devices */
+  }
+}
+
+.timer-box {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;          /* Smaller padding for mobile */
+  border-radius: 0.4rem;   
+  min-width: 70px;          /* Narrower box */
+}
+
+@media (min-width: 768px) {
+  .timer-box {
+    padding: 0.75rem;
+    border-radius: 0.4rem;
+    min-width: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .timer-box {
+    padding: 1rem;
+    border-radius: 0.4rem;
+    min-width: 80px;
+  }
+}
+
+.timer-wrapper {
+  display: flex;
+  gap: 1rem;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: flex-start; /* default for medium and up */
+}
+
+@media (max-width: 767.98px) {
+  .timer-wrapper {
+    justify-content: center;
+    flex-wrap: wrap; /* optional: allows elements to go to next line */
+  }
+}
+
+
+/**********************************************************
+   hero.html classes
+   status: 
+**********************************************************/
+
+
+.hero-area {
+  padding: 150px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url('hero-background.jpg');
+  background-size: cover; /* This will make the image cover the entire div */
+  background-position: center; /* Center the image in the div */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  width: 100%; /* Set the width of the div */
+}
+
+@media (max-width: 480px) {
+  .hero-area {
+    padding: 80px 0;
+  }
+}
+
+.hero-area:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 37, 50, 0.69);  /* Grey  #1f2532; overlay with 50% opacity */
+  z-index: 1;
+}
+
+.hero-content-up {
+  position: relative;
+  z-index: 2; /* Ensures the content is above the overlay */
+  color: white; /* Adjust text color to be visible against the background */
+}
+
+
+.hero-area .block {
+  color: #fff;
+  padding-left: 30px;
+}
+
+@media (max-width: 480px) {
+  .hero-area .block {
+    padding: 0;
+  }
+}
+
+.hero-area .block h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-area .block p {
+  color: #707d8f;
+  margin-bottom: 20px;
+}
+
+.hero-area .block .list-inline {
+  margin-top: 50px;
+}
+
+.hero-area .block .btn-main, .hero-area .block .btn-main-sm {
+  margin-right: 8px;
+}
+
+.hero-heading {
+  background-color: #aa2896;
+  color: white;
+  font-weight: bolder;
+  width: fit-content;
+  padding: 0 12px;
+  margin-bottom: 0px !important;
+}
+
+.hero-subheading {
+  background-color: #2053A6;
+  color: white;
+  font-weight: normal;
+  width: fit-content;
+  padding: 0 12px 4px;
+}
+
+.hero-date-box {
+  font-size: 1.25rem;
+  background-color: #30374A;
+  color: white;
+  font-weight: normal;
+  width: fit-content;
+  padding: 0 12px 4px;
+  margin-bottom: 16px;
+}
+
+.hero-date-title {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-invite {
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  padding-left: 12px;
+  color: white;
+}
+
+/* Responsive overrides */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 1.5rem !important; /* smaller for mobile */
+  }
+  .hero-subheading {
+    font-size: 1rem; /* smaller for mobile */
+  }
+  .hero-date-box {
+    font-size: 1rem;
+  }
+}

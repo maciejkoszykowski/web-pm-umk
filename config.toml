@@ -50,8 +50,8 @@ description =  "Autorski program Uniwersytetu Mikołaja Kopernika studiów podyp
 
 #### LOG files in one place 
 logo = "images/logo-UMK-Project-Management.png"
-logo_pmi = "images/logo_pmi_kuj_pom_50.png"
-logo_umk = "images/logo_WNEiZ_UMK_50.png"
+logo_pmi = "images/logo_pmi_kuj_pom_50.png" # TODO: remove
+logo_umk = "images/logo_WNEiZ_UMK_50.png"  # TODO: remove 
 
 # footer settings 
 footerServiceTitle = "images/poland_logo-small.png"

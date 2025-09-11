@@ -1,27 +1,29 @@
 enable  : true # this is always on 
-topTitle: PM Connect Conf 
-title   : Hero
 
-main_heading: "PM CONNECT CONF 2025"
-subheading: "Nowa równowaga: <br> AI automatyzuje, PM humanizuje"
+### Hero background file
+# change /static/css/hero-background.jpg file 
 
-timer_conf_start_date: "2025-10-25T10:00:00"
+### Headings 
 
+main_heading: "Project Management UMK "
+subheading: "Studia pod patronatem PMI PC"
+
+## TIMER + other settings 
+
+# comment if not needed
+timer_conf_start_date: "2025-10-25T10:00:00" # timer jest wylączony 
 
 show_more_msg: false
 
-invite_txt: " " # w 2026 spradź co było 
-day1_title: " " # not used in 2025
-day2_title: " " # not used in 2025
-day2_title_part2: " " # not used in 2025
-
-day1_date: " "
-day2_date: " " # not used in 2025
-
+## CALL FOR ACTION
 
 button: true
-btnText: "Kup Bilet"
-#btnText: "Zgłoś swój temat"
+btnText: "Złoż podanie"
 
-btnURL: "https://pmipolandchapter.ticketbutler.io/en/e/pm-connect-conf-pmcc-2025/"
-#btnURL = "mailto:kujawsko-pomorskie@pmi.org.pl?subject=PMCC 2025 zgłoszenie prelekcji: temat wystąpienia&body=Imię i nazwisko: \nTytuł wystąpienia: \nKategoria: \n\nPrzesyłam rozszerzony abstrakt (do 4000 znaków): \n"
+btnURL: "#podanie"
+
+### Bottom organizations:
+
+org_title: "Organizatorzy"
+org_logo1: "images/logo_pmi_kuj_pom_50.png"
+org_logo2: "images/logo_WNEiZ_UMK_50.png"

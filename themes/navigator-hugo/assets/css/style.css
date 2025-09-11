@@ -1933,7 +1933,7 @@ Prelegenci
 }
 
 .hero-subheading {
-  background-color: #2053A6;
+  background-color: var(--theme-left-color, #0050AA);
   color: white;
   font-weight: normal;
   width: fit-content;

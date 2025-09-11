@@ -1,27 +1,21 @@
-{{ $data := index .Site.Data }}
-{{ with $data.opis_konfy }}
-{{ if .enable }}
+{{ if .Params.enable }}
+
 {{ "<!-- Start About Section -->" | safeHTML }}
 <section class="about-2 section bg-gray" id="about">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-5">
-                {{ with .title }}
+                {{ with .Params.attractor }}
                     <h2>{{ . }}</h2>
                 {{ end }}
             </div>
             <div class="col-12 col-md-7">
-                {{ $content := readFile .md_file_path }}
-                {{ $body := split $content "---" }}
-                {{ $mainContent := index $body 2 }}
-
                 <p style="color: black !important">
-                 {{ $mainContent | markdownify }}
-                 </p>
+                    {{ .Content | markdownify }}
+                </p>
             </div>
         </div>
     </div>
 </section>
 {{ "<!-- End About section -->" | safeHTML }}
-{{ end }}
 {{ end }}

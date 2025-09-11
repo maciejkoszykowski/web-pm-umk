@@ -101,11 +101,15 @@
                             </div>
                         </div>
                     </div>
-            {{ end }} 
+            
             </div>
-<br>
-<br>
-<br>
+            
+            <br>
+            <br>
+            <br>
+            {{ end }} 
+
+            {{ if .titleRada }}
             <!-- Rada Programowa -->
             <div class="row">
                 <div class="col">
@@ -190,11 +194,13 @@
                     </div>
                     {{ "<!-- end rada  -->" | safeHTML }}
                 {{ end }}         
-
             </div>
-<br>
-<br>
-<br>
+            <br>
+            <br>
+            <br>
+            {{ end }} <!-- end if Rada -->
+
+            
 <!-- Zespół -->
 
 

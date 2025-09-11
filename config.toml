@@ -142,6 +142,7 @@ name = "Zespół"
 url = "#Zespol"
 weight = 25
 
+
 # Footer Quick links Menu
 [[menu.quicklink]]
 name = "Polityka prywatności"
